@@ -69,15 +69,11 @@ public class MatrixMaker {
                 final2DMatrixA[i][j] = newElementA;
                 final2DMatrixB[i][j] = newElementB;
             }
-
-            finalMatrixA = finalMatrixA.substring(0, finalMatrixA.length() - 1);
             finalMatrixA += "\n";
-
-            finalMatrixB = finalMatrixB.substring(0, finalMatrixB.length() - 1);
             finalMatrixB += "\n";
          }
-         finalMatrixA = finalMatrixA.substring(0, finalMatrixA.length() - 1);
-         finalMatrixB = finalMatrixB.substring(0, finalMatrixB.length() - 1);
+         finalMatrixA = finalMatrixA.substring(0, finalMatrixA.length() - 2);
+         finalMatrixB = finalMatrixB.substring(0, finalMatrixB.length() - 2);
 
          int[][] final2DMatrixAns = multiplyMatrix(final2DMatrixA, final2DMatrixB);
          String finalMatrixAns = "";
@@ -86,10 +82,9 @@ public class MatrixMaker {
             for(int j = 0; j < (dim); j++){
                 finalMatrixAns += final2DMatrixAns[i][j] + ",";
             }
-            finalMatrixAns = finalMatrixAns.substring(0, finalMatrixAns.length() - 1);
             finalMatrixAns += "\n";
          }
-         finalMatrixAns = finalMatrixAns.substring(0, finalMatrixAns.length() - 1);
+         finalMatrixAns = finalMatrixAns.substring(0, finalMatrixAns.length() - 2);
          finalMatrixAns += "\n";
 
          System.out.println("Enter A Prefix For The Files: ");
